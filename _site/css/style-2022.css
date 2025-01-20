@@ -59,7 +59,7 @@ a, a:visited {
 }
   
 .home {
-  max-width: 640;
+  max-width: 1280px;
   margin: 0 auto;
   font-size: 16px;
  }
@@ -68,11 +68,22 @@ a, a:visited {
     @media all and (min-width: 640px) {
       .home .top-section {
         display: flex;
-        padding: 120px 0; } }
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        padding: 64px 0; } 
+        .sidebar {
+          width: 320px;
+          margin: 120px 16px 0 16px !important;
+        }
+    }
+
+      
   .photo {
     display: flex;
     justify-content: center;
-    flex-grow: 1; }
+    flex-grow: 0; }
+
 
     .home .photo img {
       width: 120px;
@@ -86,11 +97,12 @@ a, a:visited {
         min-width: 200px; } }
   .home .about {
     flex-grow: 1;
+    max-width: 520px;
     padding: 16px 48px; }
     .home .about h1 {
       font-size: 40px;
       font-weight: 400;
-      margin: 12px 0 32px; }
+      margin: 24px 0 32px; }
     .home .about p {
       margin-bottom: 24px; }
     @media all and (min-width: 640px) {
@@ -309,7 +321,7 @@ html, body {
   }
 }
 
-.block {
+.block, a.special {
   border: solid 1px rgba(173, 173, 173, .5);
   border-radius: 8px;
   margin: 16px 0; 
@@ -317,7 +329,26 @@ html, body {
   display: flex;
 }
 
-.block:hover {
+a.special {
+  color: white;
+  width: calc(50% - 16px);
+  padding: 8px 16px;
+  line-height: 24px;
+  
+}
+
+a.special span { 
+  font-size: 24px;
+  margin-right: 8px;
+  position: relative;
+  top: -2px;
+}
+
+a.special:hover {
+  text-decoration: none !important;
+}
+
+.block:hover,  a.special:hover {
   background: rgba(173, 173, 173, .25);
 }
 
@@ -345,4 +376,10 @@ html, body {
 
 .sub-heading {
   font-size: 14px;
+}
+
+.sidebar {
+  min-width: 320px;
+  flex-shrink: 0;
+  margin: 64px 48px 32px;
 }
