@@ -300,6 +300,10 @@ html, body {
     color: var(--text-color-dark);
   }
 
+  a.special {
+    color: var(--text-color-dark) !important;
+  }
+
   img, iframe, .lightbox-image {
     filter: brightness(80%);
   }
@@ -330,7 +334,7 @@ html, body {
 }
 
 a.special {
-  color: white;
+  color: var(--text-color);
   width: calc(50% - 16px);
   padding: 8px 16px;
   line-height: 24px;
