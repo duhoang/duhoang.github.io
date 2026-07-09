@@ -1,36 +1,34 @@
 <html>
 
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<title>Du Hoang</title>
-	<link rel="stylesheet" type="text/css" href="css/style-2022.css" />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400&display=swap" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-latest.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Du Hoang</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&family=Inter:wght@800&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
 
-<script>
-	$(function(){
-		$(".cell img").click(function(){
-			var srcstring = $(this).attr("src");
-			$(".lightbox-image").css("background-image", "url("+srcstring+")");
-			$(".lightbox").fadeIn();
-		});
-		$(".lightbox").click(function(){
-			$(".lightbox").fadeOut();
-		})
-	});
-</script>
+  <script>
+    $(function(){
+      $(".cell img").click(function(){
+        var srcstring = $(this).attr("src");
+        $(".lightbox-image").css("background-image", "url("+srcstring+")");
+        $(".lightbox").fadeIn();
+      });
+      $(".lightbox").click(function(){
+        $(".lightbox").fadeOut();
+      })
+    });
+  </script>
 </head>
 
-<body class="fadein">
-	<div class="lightbox">
-		<div class="lightbox-image" style="background-image: url(img/SplashScreen.png)">
+<body>
+  <div class="lightbox">
+    <div class="lightbox-image" style="background-image: url(img/SplashScreen.png)"></div>
+  </div>
 
-		</div>
-	</div>
-
-	{{ content }}
+  {{ content }}
 </body>
 
 </html>
